@@ -5,8 +5,23 @@ description = "a smol course on llms"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "datasets>=3.1.0",
-    "huggingface-hub>=0.26.3",
-    "transformers>=4.46.3",
-    "trl>=0.12.1",
+  "datasets>=3.1.0",
+  "huggingface-hub>=0.26.3",
+  "ipykernel>=6.29.5",
+  "python-dotenv>=1.0.1",
+  "transformers>=4.46.3",
+  "trl>=0.12.1",
+  "wandb>=0.19.0",
 ]
+
+[tool.ruff]
+line-length = 88
+indent-width = 4
+extend-include = ["*.ipynb"]
+lint.task-tags = ["FIX", "TODO", "HACK", "WARN", "PERF", "NOTE", "TEST"]
+
+[tool.ruff.format]
+quote-style = "double"
+
+[tool.pyright]
+typeCheckingMode = "basic"

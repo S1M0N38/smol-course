@@ -93,7 +93,7 @@ trainer = SFTTrainer(
     model=model,
     args=sft_config,
     train_dataset=ds["train"],  # type: ignore
-    tokenizer=tokenizer,  # type: ignore
+    processing_class=tokenizer,
     eval_dataset=ds["test"],  # type: ignore
 )
 

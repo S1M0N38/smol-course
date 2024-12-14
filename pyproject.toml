@@ -10,7 +10,11 @@ dependencies = [
   "datasets>=3.1.0",
   "huggingface-hub>=0.26.3",
   "ipykernel>=6.29.5",
+  "ipywidgets>=8.1.5",
+  "lighteval",
   "loralib>=0.1.2",
+  "matplotlib>=3.10.0",
+  "numpy==1.26.4",
   "peft>=0.14.0",
   "python-dotenv>=1.0.1",
   "transformers>=4.46.3",
@@ -28,4 +32,9 @@ lint.task-tags = ["FIX", "TODO", "HACK", "WARN", "PERF", "NOTE", "TEST"]
 quote-style = "double"
 
 [tool.pyright]
+venvPath = "."
+venv = ".venv"
 typeCheckingMode = "basic"
+
+[tool.uv.sources]
+lighteval = { git = "https://github.com/huggingface/lighteval.git", rev = "main" }
